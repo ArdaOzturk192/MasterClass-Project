@@ -11,7 +11,7 @@ def get_dashboard(api_url, token):
     response = requests.get(api_url, headers=headers)
     
     if response.status_code == 200:
-        print("Dashboard data retrieved successfully!")
+        print("Dashboard data received successfully!")
         return response.json()
     else:
         print(f"Hata: {response.status_code}")
