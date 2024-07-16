@@ -18,4 +18,7 @@ Proje özeti:
 5: OpenSearch ile Grafana bağlantısı kuruldu, OpenSearch'e görselleştirmeye daha uygun daha çok veri eklendi ve Grafana da dashboard oluşturuldu.
   Grafana'ya OpenSearch bağlarken data sources kısmında bulamadım, biraz araştırdıktan sonra indirmem gerektiğini fark ettim ve indirdikten sonraki kısım Elasticsearch'e göre fazlasıyla kolay oldu sadece url ve index ismi yazmam yeterli oldu. Elasticsearch için eklediğim    verilerin benzerini OpenSearch'e de ekledim ve ve Grafana üzerinden dashboard oluşturarak onları da görüntüledim.
 
+6: Python ile Grafana api üzerinden dashboard dataları alınıp güncellendi.
+  Önce Grafana Api ile verileri aldım ve onları görüntüledim, sonra put request ile title larını güncelledim.
+
 
