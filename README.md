@@ -21,4 +21,7 @@ Proje özeti:
 6: Python ile Grafana api üzerinden dashboard dataları alınıp güncellendi.
   Önce Grafana Api ile verileri aldım ve onları görüntüledim, sonra put request ile title larını güncelledim.
 
+7: Elasticsearch ve OpenSearch'e ikişer yeni index ve veri eklendi. Flask frameworkü ile swagger üzerinden isterlerde bulunan 4 get methodu sunuldu.
+  Flask ve flasgger kurdum ve flasgger üzerinden api endpointleri oluşturularak localhost:8090 üzerinden bu methodları sundum. Daha önce koda gömerek kullandığım Grafana Url ve token verilerini bu website üzerinden parametrik olarak alarak kullanımını genelleştirmiş ve
+  kolaylaştırmış oldum.
 
