@@ -49,7 +49,7 @@ Ref: https://grafana.com/docs/grafana/latest/developers/http_api/dashboard/
 #### Get Dashboard By Id
 
 ```http
-  GET api/getDashboard/{id}
+  GET /api/getDashboard/{id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -78,7 +78,7 @@ Ref: https://grafana.com/docs/grafana/latest/developers/http_api/data_source/
 #### Get Datasource By Id
 
 ```http
-  GET api/getDatasource/{id}
+  GET /api/getDatasource/{id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -95,7 +95,7 @@ Ref: https://grafana.com/docs/grafana/latest/developers/http_api/data_source/
 #### Migrate Datasource to Another Datasource
 
 ```http
-  GET api/migrate/{from}/{to}
+  GET /api/migrate/{from}/{to}
 ```
 
 | Parameter | Type     | Description                       |
