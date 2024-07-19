@@ -1,8 +1,6 @@
 # MasterClass Projesi
 
-Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu şekilde farklı tipteki datasourceları çevirmeyi hedefler.
-
-Proje kapsamında tüm dashboardlardaki elasticsearch datasourceları opensearch datasource'una uyumlu çalışır hale çevrilmesine dair yazılacak akış yeterli olacaktır. İsterler bölümünde bulunan metodların oluşturulup localhost:8090 üzerinden API olarak sunulması gereklidir.
+Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu şekilde farklı tipteki datasourceları çevirmeyi ve bir kaç yan işlevin localhost:8090 üzerinden API olarak sunulmasını hedefler.
 
 
 ## Özellikler
