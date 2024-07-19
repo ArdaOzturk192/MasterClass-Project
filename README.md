@@ -30,4 +30,4 @@ OpenSearch kurulum linki: https://opensearch.org/downloads.html
 
 ## Kullanım
 
-Api yi (app.py) çalıştırın. Uygulama http://localhost:8090/apidocs adresinden Swagger ile erişilebilir olacaktır.
+API (app.py) çalıştırın. Uygulama http://localhost:8090/apidocs adresinden Swagger ile erişilebilir olacaktır.
