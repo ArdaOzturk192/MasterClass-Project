@@ -14,8 +14,10 @@ Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu 
 ## Gereksinimler
 
 - Grafana: Elasticsearch ve OpenSearch datasource'larının başarıyla bağlanması ve dashboardlar oluşturulması gereklidir. 
-- Elasticsearch: Dummy index ve veriler oluşturulması gereklidir. Ref: https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
-- OpenSearch : Dummy index ve veriler oluşturulması gereklidir. Ref: https://opensearch.org/docs/latest/api-reference/
+- Elasticsearch: Dummy index ve veriler oluşturulması gereklidir.
+  Ref: https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
+- OpenSearch : Dummy index ve veriler oluşturulması gereklidir.
+  Ref: https://opensearch.org/docs/latest/api-reference/
 - Python 3+
 - Flask, Flasgger: 
    ```bash
