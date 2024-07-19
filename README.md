@@ -24,10 +24,10 @@ Proje kapsamında tüm dashboardlardaki elasticsearch datasourceları opensearch
 
 ## Kurulum
 
--Grafana kurulum linki: https://grafana.com/grafana/download
--Elasticsearch kurulum linki: https://www.elastic.co/downloads/elasticsearch
--OpenSearch kurulum linki: https://opensearch.org/downloads.html
+- Grafana kurulum linki: https://grafana.com/grafana/download
+- Elasticsearch kurulum linki: https://www.elastic.co/downloads/elasticsearch
+- OpenSearch kurulum linki: https://opensearch.org/downloads.html
 
 ## Kullanım
 
-API (app.py) çalıştırın. Uygulama http://localhost:8090/apidocs adresinden Swagger ile erişilebilir olacaktır.
+- API (app.py) çalıştırın. Uygulama http://localhost:8090/apidocs adresinden Swagger ile erişilebilir olacaktır.
