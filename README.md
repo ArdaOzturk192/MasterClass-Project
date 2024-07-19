@@ -17,8 +17,9 @@ Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu 
 - Elasticsearch: Dummy index ve veriler oluşturulması gereklidir. Ref: https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
 - OpenSearch : Dummy index ve veriler oluşturulması gereklidir. Ref: https://opensearch.org/docs/latest/api-reference/
 - Python 3+
-- Flask
-- Flasgger
+- Flask, Flasgger: 
+   ```bash
+   pip install Flask Flasgger
 
 ## Kurulum
 
