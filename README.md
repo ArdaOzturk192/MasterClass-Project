@@ -1,6 +1,6 @@
 # MasterClass Projesi
 
-Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu şekilde farklı tipteki datasourceları çevirmeyi ve bir kaç yan işlevin localhost:8090 üzerinden API olarak sunulmasını hedefler.
+Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu şekilde farklı tipteki datasourceları çevirmeyi ve bir kaç yan işlevin localhost:8090/swagger-ui.html üzerinden API olarak sunulmasını hedefler.
 
 
 ## Özellikler
@@ -29,4 +29,4 @@ Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu 
 
 ## Kullanım
 
-- API (app.py) çalıştırın. Uygulama http://localhost:8090/apidocs adresinden Swagger ile erişilebilir olacaktır.
+- API (app.py) çalıştırın. Uygulama http://localhost:8090/swagger-ui.html adresinden Swagger ile erişilebilir olacaktır.
