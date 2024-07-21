@@ -120,6 +120,45 @@
                     }
                 }
             }
+        },
+        "/api/migrate/{from}/{to}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "grafana_base_url",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "Grafana API URL"
+                    },
+                    {
+                        "name": "grafana_token",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "Grafana API Token"
+                    },
+                    {
+                        "name": "from",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "Type of from datasource to fetch"
+                    },
+                    {
+                        "name": "to",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "Type of to datasource to fetch"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Datasource migration successful"
+                    }
+                }
+            }
         }
     }
 }
