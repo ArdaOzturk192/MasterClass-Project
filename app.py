@@ -127,6 +127,10 @@ def migrate_datasource(from_type, to_type): # Migrates all datasources from one 
     dashboards = dashboards_response.get_json()
     headers = get_grafana_headers(grafana_token)
 
+    # Get all datasources to use later
+    datasources_response = get_datasources()
+    datasources = datasources_response.get_json()
+
     # Loop through each dashboard
     for dashboard in dashboards:
         dashboard_details_response = get_dashboard_by_id(dashboard['uid'])
@@ -137,17 +141,37 @@ def migrate_datasource(from_type, to_type): # Migrates all datasources from one 
         dashboard_json = dashboard_details['dashboard']
         updated = False
 
-        # Check and update each panel's datasource
+        # Update each panel's datasource
         for panel in dashboard_json.get('panels', []):
             if panel.get('datasource', {}).get('type') == from_type:
-                panel['datasource']['type'] = to_type
-                updated = True
+                datasource_uid = panel['datasource']['uid']
+                datasource_response = get_datasource_by_id(datasource_uid)
+                if datasource_response.status_code == 200:
+                    datasource_details = datasource_response.get_json()
+                    database_name = datasource_details['jsonData']['index']
+
+                    for ds in datasources:
+                        if ds['jsonData'].get('database') == database_name and ds['type'] == to_type:
+                            panel['datasource']['type'] = to_type
+                            panel['datasource']['uid'] = ds['uid']
+                            updated = True
+                            break
 
             # Change the type of the datasource in the targets of the panel
             for target in panel.get('targets', []):
                 if target.get('datasource', {}).get('type') == from_type:
-                    target['datasource']['type'] = to_type
-                    updated = True
+                    datasource_uid = target['datasource']['uid']
+                    datasource_response = get_datasource_by_id(datasource_uid)
+                    if datasource_response.status_code == 200:
+                        datasource_details = datasource_response.get_json()
+                        database_name = datasource_details['jsonData']['index']
+
+                        for ds in datasources:
+                            if ds['jsonData'].get('database') == database_name and ds['type'] == to_type:
+                                target['datasource']['type'] = to_type
+                                target['datasource']['uid'] = ds['uid']
+                                updated = True
+                                break
 
         if updated:
             # Update the dashboard with new datasource
