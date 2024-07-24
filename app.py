@@ -161,28 +161,21 @@ def migrate_datasource(from_type, to_type): # Migrates all datasources from one 
                     datasource_details = datasource_response.get_json()
                     database_name = datasource_details['jsonData']['index']
 
+                    matched_ds = None
                     for ds in datasources:
                         if ds['jsonData'].get('database') == database_name and ds['type'] == to_type:
-                            panel['datasource']['type'] = to_type
-                            panel['datasource']['uid'] = ds['uid']
-                            updated = True
+                            matched_ds = ds
                             break
 
-            # Change the type of the datasource in the targets of the panel
-            for target in panel.get('targets', []):
-                if target.get('datasource', {}).get('type') == from_type:
-                    datasource_uid = target['datasource']['uid']
-                    datasource_response = get_datasource_by_id(datasource_uid)
-                    if datasource_response.status_code == 200:
-                        datasource_details = datasource_response.get_json()
-                        database_name = datasource_details['jsonData']['index']
+                    if matched_ds:
+                        panel['datasource']['type'] = to_type
+                        panel['datasource']['uid'] = matched_ds['uid']
+                        updated = True
 
-                        for ds in datasources:
-                            if ds['jsonData'].get('database') == database_name and ds['type'] == to_type:
-                                target['datasource']['type'] = to_type
-                                target['datasource']['uid'] = ds['uid']
-                                updated = True
-                                break
+                        # Change the type of the datasource in the targets of the panel
+                        for target in panel.get('targets', []):
+                            target['datasource']['type'] = to_type
+                            target['datasource']['uid'] = matched_ds['uid']
 
         if updated:
             # Update the dashboard with new datasource
