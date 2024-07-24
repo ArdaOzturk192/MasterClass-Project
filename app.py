@@ -119,8 +119,19 @@ def migrate_datasource(from_type, to_type): # Migrates all datasources from one 
     grafana_base_url = request.args.get('grafana_base_url')
     grafana_token = request.args.get('grafana_token')
 
+    # Send error if the required parameters are not provided
     if not grafana_base_url or not grafana_token:
         return jsonify({"error": "Grafana URL and token are required"}), 400
+    
+
+    if from_type == "ELASTIC":
+        from_type = "elasticsearch"
+    else: return jsonify({"error": "Invalid from datasource type"}), 400
+
+    if to_type == "OPENSEARCH":
+        to_type = "grafana-opensearch-datasource"
+    else: return jsonify({"error": "Invalid to datasource type"}), 400
+
 
     # Get all dashboards
     dashboards_response = get_dashboards()
