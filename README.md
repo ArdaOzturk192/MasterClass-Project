@@ -1,6 +1,6 @@
 # MasterClass Projesi
 
-Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu şekilde farklı tipteki datasourcelara çevirmeyi ve bir kaç yan işlevin localhost:8090/swagger-ui.html üzerinden API olarak sunulmasını hedefler.
+Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu şekilde farklı tipteki datasourcelara çevirmekle beraber bir kaç yan işlevin localhost:8090/swagger-ui.html üzerinden API olarak sunulmasını hedefler.
 
 
 ## Özellikler
