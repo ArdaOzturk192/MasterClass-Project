@@ -10,7 +10,7 @@ Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu 
 - Tüm Grafana datasource'ları almak
 - Belirli bir datasource'un ID'sine göre detaylarını almak
 - Grafana'daki dashboard'larda bulunan datasource'ları uyumlu şekilde farklı tipteki datasourceları'na çevirmek
-  Daha detaylı bilgi için requirements.md dosyasına bakın
+- Daha detaylı bilgi için requirements.md dosyasına bakın
 
 ## Gereksinimler
 
