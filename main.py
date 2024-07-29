@@ -45,7 +45,7 @@ def update_dashboard(api_url, token, dashboard_data):
 def main():
     # API endpointi
     grafana_url = 'http://localhost:3000/'
-    api_token = 'glsa_icqAfZecHkWTpahAtQ7XuKaTaFJKJhAs_c3b94302'
+    api_token = ''
     elasticsearch_uid = "edrny9vqcmz9cf"
     opensearch_uid = "ddrxdjvgugs1se"
     
