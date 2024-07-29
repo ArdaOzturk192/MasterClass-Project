@@ -31,3 +31,5 @@ Bu proje grafana üzerindeki tüm dashboardlarda bulunan datasourceları uyumlu 
 ## Kullanım
 
 - API (app.py) çalıştırın. Uygulama http://localhost:8090/swagger-ui.html adresinden Swagger ile erişilebilir olacaktır.
+
+Arda Öztürk
